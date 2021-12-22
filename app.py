@@ -19,10 +19,10 @@ image_format = {"image/jpg", "image/jpeg", "image/png"}
 model_list = {"celeba_distill", "face_paint_512_v1", "face_paint_512_v2", "paprika"}
 
 models = {
-    "celeba_distill": torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="celeba_distill"),
-    "face_paint_512_v1": torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="face_paint_512_v1"),
-    "face_paint_512_v2": torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="face_paint_512_v2"),
-    "paprika": torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="paprika"),
+    "celeba_distill": torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="celeba_distill", device=device),
+    "face_paint_512_v1": torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="face_paint_512_v1", device=device),
+    "face_paint_512_v2": torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="face_paint_512_v2", device=device),
+    "paprika": torch.hub.load("bryandlee/animegan2-pytorch:main", "generator", pretrained="paprika", device=device),
 }
 face2paint = torch.hub.load("bryandlee/animegan2-pytorch:main", "face2paint", device=device, size=512)
 
